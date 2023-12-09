@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".pageView.OrderFragment"
+    android:background="@color/white">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:text="ORDER"
+        android:textStyle="bold"
+        android:textSize="30sp"
+        android:textColor="@color/white"
+        android:gravity="center"/>
+    <EditText
+        android:id="@+id/search_form"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="5dp"
+        android:paddingStart="15dp"
+        android:hint="Temukan Pesanan"
+        android:drawableEnd="@drawable/search_icon"
+        android:drawablePadding="10dp"
+        android:background="@drawable/search_background"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/filter_button"
+        />
+
+        <ImageView
+            android:id="@+id/filter_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="10dp"
+            android:padding="10dp"
+            android:src="@drawable/filter_icon"
+            android:background="@drawable/back_btn_ripple"
+            app:layout_constraintTop_toTopOf="@id/search_form"
+            app:layout_constraintBottom_toBottomOf="@id/search_form"
+            app:layout_constraintStart_toEndOf="@id/search_form"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="Pesanan tidak ditemukan"
+            android:textSize="18sp"
+            android:textColor="@color/grey"
+            app:layout_constraintTop_toBottomOf="@id/search_form"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"/>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

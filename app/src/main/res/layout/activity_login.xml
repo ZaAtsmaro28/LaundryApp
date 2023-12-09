@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".auth.Login"
+    android:background="@color/white">
+
+    <TextView
+        android:id="@+id/text_title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:text="Laundry App"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+         />
+    <ImageView
+        android:id="@+id/icon_login"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="90dp"
+        android:src="@drawable/user_icon"
+        app:layout_constraintTop_toBottomOf="@id/text_title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+    <TextView
+        android:id="@+id/teks_selamat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Selamat Datang"
+        android:textColor="@color/black"
+        android:textSize="22sp"
+        android:textStyle="bold"
+        android:shadowColor="@color/black"
+        android:shadowDy="1"
+        android:shadowDx="2"
+        android:shadowRadius="2"
+        app:layout_constraintTop_toBottomOf="@id/icon_login"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+    <TextView
+        android:id="@+id/teks_instruksi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Silahkan masukkan akun anda"
+        android:textSize="15sp"
+        android:textColor="@color/grey"
+        app:layout_constraintTop_toBottomOf="@id/teks_selamat"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+    <EditText
+        android:id="@+id/et_username"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="40dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:padding="13dp"
+        android:hint="Email"
+        android:drawableStart="@drawable/email_logo"
+        android:drawablePadding="13dp"
+        android:background="@drawable/et_background"
+        app:layout_constraintTop_toBottomOf="@id/teks_instruksi"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"/>
+    <EditText
+        android:id="@+id/et_password"
+        android:layout_width="0dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginEnd="30dp"
+        android:padding="13dp"
+        android:hint="Kata Sandi"
+        android:drawableStart="@drawable/password_logo"
+        android:drawablePadding="13dp"
+        android:background="@drawable/et_background"
+        app:layout_constraintTop_toBottomOf="@id/et_username"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        />
+    <CheckBox
+        android:id="@+id/remember_box"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp"
+        android:text="Remember me"
+        android:theme="@style/colored_checkbox"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/et_password"
+        app:layout_constraintStart_toStartOf="@id/et_password"/>
+
+
+    <TextView
+        android:id="@+id/lupa_sandi"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:text="Lupa kata sandi"
+        android:textColor="@color/blue_cold"
+        android:background="@drawable/feature_card_ripple"
+        app:layout_constraintTop_toBottomOf="@id/et_password"
+        app:layout_constraintEnd_toEndOf="@id/et_password"
+        />
+    <Button
+        android:id="@+id/btn_login"
+        android:layout_width="0dp"
+        android:layout_height="45dp"
+        android:layout_marginTop="20dp"
+        android:text="Masuk"
+        android:textSize="17sp"
+        android:textColor="@color/white"
+        android:background="@drawable/login_btn_background"
+        app:layout_constraintTop_toBottomOf="@id/remember_box"
+        app:layout_constraintStart_toStartOf="@id/et_password"
+        app:layout_constraintEnd_toEndOf="@id/et_password"/>
+
+
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/btn_login"
+        app:layout_constraintStart_toStartOf="@id/btn_login"
+        app:layout_constraintEnd_toEndOf="@id/btn_login">
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="4dp"
+            android:text="Anda belum memiliki akun? "
+            />
+        <TextView
+            android:id="@+id/regist_btn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="Daftar disini"
+            android:textColor="@color/blue_cold"
+            android:background="@drawable/feature_card_ripple"
+            android:textStyle="bold"
+            />
+    </LinearLayout>
+
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
